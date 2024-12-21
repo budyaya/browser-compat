@@ -128,8 +128,8 @@ func parseJson(path string, keys []string, jsonstr []byte) error {
 		}
 		compat := models.BrowserCompatData{
 			Type:    keys[0],
-			MdnUrl:  keys[0],
-			SpecUrl: keys[0],
+			MdnUrl:  string(data["mdn_url"]),
+			SpecUrl: string(data["spec_url"]),
 			Api:     api,
 		}
 		for dk, dv := range data {
